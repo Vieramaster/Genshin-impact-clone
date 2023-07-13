@@ -46,17 +46,7 @@
 }
 
 /* Evitamos problemas con las imagenes */
-img, picture, video, iframe, figure {
-  max-width: 100%;
-  width: 100%;
-  display: block;
-  /* opcional */
-  -o-object-fit: cover;
-     object-fit: cover;
-  /* opcional */
-  -o-object-position: center center;
-     object-position: center center;
-}
+
 
 /* Reseteamos los enlaces para funcionar como cajas... */
 a {
