@@ -1,0 +1,194 @@
+body{
+    font-family:Tahoma, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-size-adjust: 100%;
+    font-size: 0.9rem;
+}
+header{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 4.2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    word-spacing: 1px;
+    line-height: 4.1rem; 
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    color: #ccc;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
+    
+}
+
+
+.box1, .box2{
+    display: flex;
+    height: 100%;
+}
+
+.header__logo{
+   
+    height: 4rem;
+    margin-top:0 ;
+    margin-left:8rem
+    
+    
+}
+
+.header__nav{
+    
+    width: 40rem;
+    align-items: center;
+}
+
+.header__nav>ul{
+    display: flex;
+ 
+    
+}
+.header__nav li{
+    height: 4.2rem;
+    width: 100%;
+    background-color: rgb(151, 44, 103);
+    display: grid;
+    align-items: center;
+    
+}
+.header__nav a{
+    margin: auto 1rem;
+    white-space: nowrap;
+
+}
+.header__nav>ul>li{
+    position: relative;
+}
+
+
+
+.header__nav>ul>li>ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+    
+    
+}
+
+
+
+
+
+.header__download{
+    background-color: #fccc0c ;
+    width: 13.6rem;
+    height: 100%;
+}
+
+.header__download a{
+    filter: blur(0.5px);
+    font-size: 1.1rem;
+    letter-spacing: 3.5px;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    
+    text-align: center;
+}
+
+.header__sesion{
+    height: 100%;
+    width: 12,2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+.header__sesion svg{
+    margin: auto 1.2rem;
+}
+.header__sesion h2 {
+    white-space: nowrap;
+    margin: auto 
+    
+}
+
+#block1__video{
+  position: absolute;
+  right: 0;
+  bottom: -4rem;
+  z-index: -1;
+  
+}
+
+
+@media (min-aspect-ratio: 16/9){
+    #block1__video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    #block1__video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+.block1{
+    background-color: rgba(0, 0, 0, 0.);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+
+
+    
+   
+}
+
+.block1__playvideo{
+    background-color: antiquewhite;
+    width: 20rem;
+    height: 5rem;
+
+}
+
+.block1 h2{
+    font-size: 2.5em;
+    margin: 4rem auto 2rem auto;
+}
+
+.block1__gamedownloads{
+    width: 80rem;
+    height: 6rem;
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.block1__gamedownloads a{
+    background-color: brown;
+    width: 12rem ;
+    height: 3.8rem ;
+    margin: auto 1em;
+}
+
+.block1__arrows{
+background-color: aqua;
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    margin: 1rem auto;
+    
+}
+
+.block2{
+    background-color: rgb(36, 228, 218);
+    margin-top: 0;
+    height: 100vh;
+}
