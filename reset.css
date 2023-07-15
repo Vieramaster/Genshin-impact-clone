@@ -13,8 +13,8 @@
 :root {
   --negro: #393939;
   /* Tipografía */
-  --tipo-principal: Helvetica, Arial, sans-serif;
-  --tipo-secundaria: Verdana;
+  --tipo-principal: tahoma;
+  --tipo-secundaria: Helvetica,
 }
 
 /* Las adaptamos al modo oscuro */

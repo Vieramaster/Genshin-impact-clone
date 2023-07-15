@@ -4,6 +4,8 @@ body {
   text-size-adjust: 100%;
   font-size: 0.8rem;
 }
+
+/*BLOQUE DE EADER*/
 header {
   background-color: rgba(0, 0, 0, 0.7);
   height: 4.1rem;
@@ -30,6 +32,7 @@ header {
 
 .header__nav {
   width: 40rem;
+
   align-items: center;
 }
 
@@ -82,6 +85,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
 }
 .header__sesion svg {
   margin: auto 1.2rem;
@@ -90,107 +95,207 @@ header {
   white-space: nowrap;
   margin: auto;
 }
-
-#block1__video {
-  position: absolute;
-
-  bottom: -4rem;
-  z-index: -1;
+.header__responsive {
+  display: none;
 }
 
-@media (min-aspect-ratio: 16/9) {
-  #block1__video {
-    width: 100%;
-    height: auto;
-  }
+.header__nav a:hover {
+  text-shadow: 1px 1px 18px rgba(105, 224, 255, 1),
+    1px 1px 18px rgba(105, 224, 255, 1), 1px 1px 18px rgba(105, 224, 255, 1);
+  color: #fff;
+  transition: 0.3s ease;
 }
-@media (max-aspect-ratio: 16/9) {
-  #block1__video {
-    width: auto;
-    height: 100%;
-  }
+.header__sesion:hover h2,
+.header__sesion:hover svg {
+  color: white;
+  fill: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
 }
 
 .block1 {
-    user-select: none;
+  user-select: none;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
+}
+
+.block1__video {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.block1__video video {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .block1__playvideo {
   width: auto;
   display: grid;
   position: relative;
-
 }
-.block1__playvideo--svgbg{
-    background-color: #fff;
-    width: 2.9rem;
-    height: 2.9rem;
-    position: absolute;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    bottom: 0.9rem;
-    left: 43.5%;
-    cursor: pointer;
+.block1__playvideo--svgbg {
+  background-color: #fff;
+  width: 2.9rem;
+  height: 2.9rem;
+  position: absolute;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  bottom: 0.9rem;
+  left: 43.5%;
+  cursor: pointer;
 }
-.block1__playvideo--svgbg svg{
-    
-    bottom:1.2rem;
-    width: 1.6rem;
-    margin-left: 0.38rem;
+.block1__playvideo--svgbg svg {
+  bottom: 1.2rem;
+  width: 1.6rem;
+  margin-left: 0.38rem;
 }
 .block1 p {
   font-size: 1.85rem;
   margin: 2.6rem auto 2.2rem auto;
-  text-shadow: 0px 0px 8px rgba(114,71,21,0.68),  0px 0px 8px rgba(114,71,21,0.68);
- 
-
-
+  text-shadow: 0px 0px 8px rgba(114, 71, 21, 0.68),
+    0px 0px 8px rgba(114, 71, 21, 0.68);
 }
 .block1__gamedownloads {
-  width: 80rem;
   height: 4rem;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  margin-bottom: 1.3rem ;
+
+  margin-bottom: 1.3rem;
 }
 
 .block1__gamedownloads a {
-
-  margin: auto  0.5rem;
+  margin: auto 0.5rem;
 }
 
-.block1__gamedownloads img{
-    width: 11.7rem;
-    opacity: 0.82;
+.block1__gamedownloads img {
+  width: 11.7rem;
+  opacity: 0.82;
 }
+
+.block1__imgrate {
+  position: absolute;
+  width: 12.5rem;
+  height: auto;
+  left: 0;
+  bottom: 0;
+  margin: auto auto 0.65rem 0.65rem;
+}
+
 .block1__arrows {
-  background-color: aqua;
   display: grid;
-  width: 3rem;
-  height: 3rem;
-  margin: 1rem auto;
+  height: 5rem;
 }
 
-.block1__imgrate{
-    position: absolute;
-    width: 12.5rem;
-    height: auto;
-    left: 0;
-    bottom: 0;
-    margin: auto auto 0.5rem 0.5rem;
+.block__arrows--arrow1 {
+  transform: translateY(0.8rem);
 }
+
+.block__arrows--arrow2 {
+  transform: translateY(-0.4rem);
+}
+
+.block__arrows--arrow3 {
+  transform: translateY(-1.6rem);
+}
+
+.block__arrows--arrow1 {
+  transform: translateY(0.8rem);
+}
+
+.block__arrows--arrow1,
+.block__arrows--arrow2,
+.block__arrows--arrow3 {
+  animation: blink 3s infinite;
+  transition: all 0.2s ease;
+}
+
+.block__arrows--arrow1 {
+  animation-delay: 0.2s;
+}
+
+.block__arrows--arrow2 {
+  animation-delay: 0.4s;
+}
+
+.block__arrows--arrow3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.block1__download {
+  display: none;
+}
+
+.block1__playvideo--svgbg:hover {
+  background-color: rgba(255, 255, 255, 0);
+  transition: 0.3s all ease;
+  fill: #fff;
+}
+
+.block1__playvideo--svgbg:hover svg g {
+  fill: white;
+  transition: 0.2s all ease;
+}
+
 .block2 {
   background-color: rgb(36, 228, 218);
   margin-top: 0;
   height: 100vh;
+}
 
+@media (width < 1550px) {
+  
+  .header__logo {
+    margin-left: 2rem;
   }
+
+  .block1__imgrate {
+    width: 10rem;
+  }
+  .block1__imgrate {
+    display: none;
+  }
+}
+
+@media (width < 1350px) {
+  .header__nav,
+  .header__sesion {
+    display: none;
+  }
+  .header__responsive {
+    display: block;
+    width: 3rem;
+  }
+}
