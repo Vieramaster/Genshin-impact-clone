@@ -10,6 +10,10 @@ body {
 }
 /*---------------------------------------------MODAL --------------------------------------------------------------------*/
 
+body.open-modal {
+  overflow: hidden;
+}
+
 #modal {
   height: 34rem;
   width: 28rem;
@@ -19,6 +23,8 @@ body {
   translate: -50% -50%;
   font-family: "Microsoft YaHei";
   transition: 0.3s all ease;
+
+ 
 }
 #modal::backdrop {
   background-color: rgba(0, 0, 0, 0.4);
@@ -28,6 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   transition: 0.3s all ease;
+  
 }
 
 .modal__btnClose {
