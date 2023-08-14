@@ -23,8 +23,6 @@ body.open-modal {
   translate: -50% -50%;
   font-family: "Microsoft YaHei";
   transition: 0.3s all ease;
-
- 
 }
 #modal::backdrop {
   background-color: rgba(0, 0, 0, 0.4);
@@ -34,7 +32,6 @@ body.open-modal {
   display: flex;
   flex-direction: column;
   transition: 0.3s all ease;
-  
 }
 
 .modal__btnClose {
@@ -71,9 +68,13 @@ body.open-modal {
   height: 3rem;
 }
 
-.modal ::placeholder {
-  color: #cccbc7;
+
+input {
   padding-left: 1rem;
+  
+}
+input::placeholder{
+  color: #cccbc7;
 }
 
 .modal button {
@@ -116,6 +117,9 @@ body.open-modal {
   background-color: #dadce2;
   margin: auto;
 }
+
+
+
 
 .modal__social {
   display: flex;
@@ -240,6 +244,10 @@ header {
   fill: white;
   cursor: pointer;
   transition: all 0.3s ease-in;
+}
+
+.header__movil{
+  display: none;
 }
 /*------------------------------------------------------ BLOQUE 1 ----------------------------------------------------------*/
 .block1 {
@@ -407,6 +415,7 @@ header {
   background-color: rgb(109, 109, 109);
   margin-top: 0;
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   background-image: url(/images/wallpaper-block2.webp);
@@ -524,6 +533,7 @@ header {
   justify-content: center;
   gap: 3rem;
   align-items: center;
+  width: 100vw;
 }
 
 .block3__banner svg {
@@ -589,7 +599,7 @@ footer {
   margin: 1rem auto;
 }
 footer > p {
-  margin: auto 2rem=;
+  margin: auto 2rem;
 }
 footer > p:last-child {
   color: white;
@@ -643,10 +653,7 @@ footer a:hover {
     margin: auto 0 auto auto;
   }
 
-  .block2__container {
-    width: 56rem;
-    height: 17.5rem;
-  }
+ 
 }
 /*------------------------------- 1280px media ---------------------------*/
 @media (max-width: 1280px) {
@@ -676,12 +683,11 @@ footer a:hover {
 @media (width < 950px) {
   .header__download,
   .block1__gamedownloads,
-  .block1 p,
-  .header__logo {
+  .block1 p {
     display: none;
   }
 
-  header {
+  .header__responsive2 {
     height: 20rem;
     width: 100vw;
     flex-direction: column;
@@ -704,7 +710,7 @@ footer a:hover {
     filter: drop-shadow(0px 0px 1px #000);
   }
 
-  .header__responsive {
+  .header__responsive2 {
     order: 1;
     flex-basis: 20%;
     display: flex;
@@ -712,7 +718,7 @@ footer a:hover {
     margin: auto 2rem auto auto;
   }
 
-  .header__responsive svg {
+  .header__responsive2 svg {
     width: 2.5rem;
     filter: drop-shadow(0px 0px 0.3px #000);
     fill: white;
@@ -735,10 +741,7 @@ footer a:hover {
   .block1__video video {
     object-position: 33% center;
   }
-  .block2__container {
-    width: 27rem;
-    height: 60rem;
-  }
+
 
   .block2__banner {
     margin: 3rem auto;
@@ -749,16 +752,34 @@ footer a:hover {
   .block3__city {
     height: 50%;
   }
+  .block3__banner {
+
+    gap:2.5rem;
+  }
+
+}
+
+
+@media( width < 500px){
+  .footer__links{
+    gap:auto;
+    margin: 2rem 1.5rem;
+    display: grid;
+   
+  }
+  
+}
 
   /*------------------------------- 400px media ---------------------------*/
-  @media (width < 400px) {
+@media (width < 400px) {
     .header__logoresponsive img {
       width: 60%;
       height: auto;
     }
 
-    .header__responsive {
+    .header__responsive2 {
       width: 60%;
+      height: auto;
     }
 
     .header__responsive svg {
@@ -794,5 +815,14 @@ footer a:hover {
     .block1__playvideo svg {
       width: 50%;
     }
-  }
+    .block3__banner {
+
+      gap:1rem;
+    }
+    .footer__hoyoverse{
+      width: 80%;
+      margin-top: 2rem;
+    }
 }
+
+
