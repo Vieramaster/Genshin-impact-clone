@@ -22,3 +22,5 @@ document.getElementById("btn-open-modal").addEventListener("click", function () 
 document.getElementById("btn-close-modal").addEventListener("click", function () {
     document.body.classList.remove("open-modal");
 });
+
+

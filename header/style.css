@@ -1,0 +1,440 @@
+@font-face {
+	font-family: Microsoft YaHei;
+	src: url(/fonts/chinese.msyh.ttf);
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  height: 4.1rem;
+  font-size: 0.9rem;
+  line-height: 4.1rem;
+  z-index: 1;
+  user-select: none;
+  position: fixed;
+  color: #ccc;
+  box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.4);
+  width: 100vw;
+  text-align: center;
+}
+/*-------------------- LOGO-------------------------*/
+.header__logo {
+  height: 3.8rem;
+  width: 10.5rem;
+  margin: 0 2.2rem auto 7.8rem;
+  
+}
+
+.header__logo img {
+  height: 100%;
+  width: 100%;
+}
+/*------------------------NAV-------------------------*/
+.header__box {
+  
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.header__nav {
+  
+  text-align: center;
+  position: relative;
+}
+
+.header__nav > ul {
+  
+  display: flex;
+}
+
+.header__nav > ul li {
+  
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  padding: 0 1rem;
+}
+
+.header__nav--recursos svg {
+  margin-left: 0.5rem;
+}
+.header__nav--recursos > ul {
+  position: absolute;
+  transform: translateX(-1rem);
+  width: 6.85rem;
+  display: none;
+  transition: 0.3s all ease;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*---------------------SESION----------------*/
+.header__sesion {
+  
+  height: 4.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  width: auto;
+}
+.header__sesion svg {
+  margin: auto 1.2rem;
+}
+.header__sesion h2 {
+  white-space: nowrap;
+  margin: auto;
+}
+/*---------------------DOWNLOAD----------------*/
+.header__download {
+  background-color: #fccc0c;
+  width: 13.6rem;
+  height: 100%;
+  font-size: 1.2rem;
+  letter-spacing: 2.4px;
+  color: black;
+  filter: blur(0.3px);
+}
+/*------------- RESPONSIVE ---------------------------------*/
+.header__responsiveOpen {
+  display: none;
+}
+
+.header__responsiveClose {
+  display: none;
+}
+/*---------------HOVER NAV-------------------------------------*/
+@media (hover: hover){
+  .header__nav a:hover {
+    text-shadow: 1px 1px 18px rgba(105, 224, 255, 1),
+      1px 1px 18px rgba(105, 224, 255, 1), 1px 1px 18px rgba(105, 224, 255, 1);
+    color: #fff;
+    transition: 0.3s ease;
+  }
+  .header__sesion:hover h2,
+  .header__sesion:hover svg {
+    color: white;
+    fill: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+  }
+}
+
+/*-----------------------------------MODAL---------------------------------------*/
+body.open-modal {
+    overflow: hidden;
+  }
+  
+  .modal--visible{
+    transform: scale(100%);
+    transition: 0.3s all ease;
+  }
+
+  #modal {
+    height: 34rem;
+    width: 28rem;
+    border-radius: 10px;
+    padding: auto;
+    margin: auto;
+    font-family: "Microsoft YaHei";
+    transition: 0.3s all ease;
+    transform: scale(0);
+   
+  }
+
+
+  
+  /* Establece el estado final del modal (zoom = 100) */
+  #modal.active  {
+    transform: scale(1);
+  }
+  #modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s all ease;
+  }
+  
+  .modal__btnClose {
+    margin: 1rem 1rem 0 auto;
+    height: 1rem;
+  }
+  
+  .modal__logo {
+    width: 11rem;
+    margin: 0 auto 1.7rem;
+  }
+  
+  .modal > h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  .modal__form,
+  .modal__links,
+  .modal__lin {
+    width: 85%;
+    align-items: center;
+  }
+  .modal__form {
+    margin: 1rem auto 0 auto;
+  }
+  .modal input,
+  .modal button {
+    margin: 1.5rem auto 0 auto;
+    border: 1px rgb(211, 210, 210) solid;
+    background-color: #f9fafc;
+    border-radius: 7px;
+    width: 100%;
+    height: 3rem;
+  }
+  
+  
+  input {
+    padding-left: 1rem;
+    
+  }
+  input::placeholder{
+    color: #cccbc7;
+  }
+  
+  .modal button {
+    background-color: #e4e5eb;
+    margin-top: 2.5rem;
+    color: #bebfc4;
+    height: 2.5rem;
+  }
+  
+  .modal__btnClose:hover svg {
+    background-color: #e4e5eb;
+    transition: 0.15s all ease-in;
+    border-radius: 5px;
+  }
+  
+  .modal__links {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto 0 auto;
+    color: #d3bc8e;
+    font-size: 0.9rem;
+  }
+  
+  .modal__lin {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  
+    margin: 2rem auto 0 auto;
+  }
+  .modal p {
+    font-size: 0.75rem;
+    color: #babbc2;
+    font-weight: 400;
+  }
+  
+  .modal__lin--line {
+    width: 5rem;
+    height: 1px;
+    background-color: #dadce2;
+    margin: auto;
+  }
+  
+  
+  
+  
+  .modal__social {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .modal__social img {
+    width: 2.5rem;
+  }
+/*------------------------------------MEDIA-------------------------------------*/
+
+@media (width < 1440px) {
+  .header__logo {
+    margin-left: 1rem;
+  }
+}
+
+@media (width < 1300px) {
+  .header__download {
+    display: none;
+  }
+
+  .header__sesion{
+    background-color: #f5f5f5;
+    padding-left: 2rem;
+    color: rgb(102, 101, 101);
+  }
+  .header__sesion svg{
+    fill:rgb(102, 101, 101);
+  }
+  .header__sesion:hover{
+    background-color: #fccc0c;
+    transition: all 0.3s ease-in;
+  }
+  .header__sesion:hover h2,
+  .header__sesion:hover svg {
+    color: rgb(102, 101, 101);
+    fill: rgb(102, 101, 101);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+  }
+}
+
+@media (width < 1050px) {
+  
+  .header__box {
+    margin-right: 0;
+    width: 50%;
+    transform: translateX(50rem);
+    height: 100vh;
+    font-size: 1.2rem;
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    color: black;
+  }
+
+  .header__box-open {
+   
+    transition: 0.5s all ease-out;
+    transform: translateX(0rem);
+    
+  }
+
+  .header__nav > ul,
+  .header__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    
+    
+  }
+
+  .header__nav > ul li {
+    padding: 0;
+    border-bottom: #f5f5f5 1px solid; 
+  }
+
+  .header__nav--recursos a, .header__nav--recursos a> svg{ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  .header__nav--recursos svg{
+    margin-right: 2rem;
+    height: 1.5rem;
+    fill: rgb(97, 95, 95);
+  }
+
+  .header__responsiveOpen {
+    display: block;
+    display: grid;
+    align-items: center;
+    margin-right: 1rem;
+    cursor: pointer;
+ 
+  }
+
+  .header__responsiveOpen svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #f5f5f5 ;
+  }
+  header span{
+    margin-left: 2rem;
+  }
+  .header__responsiveClose {
+    
+    background-color: #393b40;
+    width: 100%;
+    height: 4.1rem;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    
+    position: relative;
+  }
+
+  .header__responsiveClose svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1rem 1rem 2rem;
+    fill: #f5f5f5 ;
+  }
+
+  .header__nav > ul > li > ul {
+    position: inherit;
+    transform: translateX(-0.01rem);
+    width: 100%;
+   
+    transition: 0.3s all ease;
+  }
+
+  .header__sesion {
+    align-items: center;
+    width: 100%;
+    background-color:#f5f5f5;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top: 3rem;
+    padding-left: 0;
+  }
+
+  .header__sesion h2 {
+    width: 8rem;
+    margin: 0;
+    
+    
+
+  }
+  .header__sesion svg{
+     fill:rgb(102, 101, 101);
+     width: 2rem;
+     margin-left: 1.5rem;
+  }
+  
+  @media (hover: hover){
+  .header__nav a:hover {
+    text-shadow: none;
+    color:black;
+    transition: 0.3s ease;
+  }
+  .header__sesion:hover h2,
+  .header__sesion:hover svg {
+    color: white;
+    fill: white;
+    
+  }
+
+}
+
+@media (width < 370px){
+
+  .header__sesion svg{
+    display: none;
+  }
+  .header__sesion h2{
+    margin-left: 2rem;
+  }
+  .header__box{
+    width: 60%;
+   
+  }
+  
+  #modal{
+    white-space: nowrap;
+  }
+}

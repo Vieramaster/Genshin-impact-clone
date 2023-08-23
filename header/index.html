@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <header>
+        
+        
+            <div class="header__logo">
+                <img src="/logo-genshin.svg" alt="Genshin-Logo" />
+            </div>
+
+            <div class="header__box" >
+                <button class="header__responsiveClose" id="responsiveClose">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                    
+                </button>
+                <nav class="header__nav">
+                    <ul>
+                      <li><a href="#"><span>Inicio</span></a></li>
+                      <li><a href="#"><span>Noticias</span></a></li>
+                      <li><a href="#"><span></span>Personajes</a></li>
+                        <li class="header__nav--recursos" id="menuRecursos">
+                            <a href="#"  ><span>Recursos</span><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></a>
+                          <ul id="subMenu">
+                              <li><a href="#"><span>presentacíon</span></a></li>
+                              <li><a href="#"><span>Mundo</span></a></li>
+                              <li><a href="#"><span>Explotar</span></a></li>
+                              <li><a href="#"><span>Manga</span></a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#"><span>HoYoLAB</span></a></li>
+                        <li><a href="#"><span>Recarga</span></a></li>
+                        <li><a href="#"><span>Canjear Código</span></a></li>
+                    </ul>
+                </nav>
+                
+                <button class="header__sesion" id="btn-open-modal">
+                    <h2>Iniciar Sesión</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 512 512" ><style> svg { fill: #ccc; }  </style> <path
+                            d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z" />
+                        </svg>
+                </button> 
+                
+            </div>
+            <div class="header__download">
+                <a href="">Descargar</a>
+            </div>
+            <div class="header__responsiveOpen" id="responsiveOpen">
+                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" viewBox="0 0 448 512" > <path  d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
+            </div>
+    </header>
+    <dialog id="modal" class="modal__sesion">
+    
+        <div class="modal">
+          <div class="modal__btnClose" id="btn-close-modal">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1.5rem"
+              viewBox="0 0 384 512"
+            >
+              <path
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+              />
+            </svg>
+          </div>
+          <img class="modal__logo" src="/images/logo-black.webp" alt="logo" />
+  
+          <h1>Inicio de sesión</h1>
+          <form class="modal__form">
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder=" Usuario/Correo electronico"
+            />
+  
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder=" contraseña"
+            />
+            <button type="submit">iniciar sesión</button>
+          </form>
+          <div class="modal__links">
+            <a href="<#">Ha ocurrido un problema</a>
+            <a href="<#">Registrarse</a>
+          </div>
+          <div class="modal__lin">
+            <div class="modal__lin--line"></div>
+            <p>Otros métodos para iniciar sesión</p>
+            <div class="modal__lin--line"></div>
+          </div>
+  
+          <div class="modal__social">
+            <a href="#"
+              ><img src="/images/google-icon.webp" alt="google-sesión"
+            /></a>
+            <a href="#"
+              ><img src="/images/apple-icon.webp" alt="apple-sesión"
+            /></a>
+            <a href="#"
+              ><img src="/images/facebook-icon.webp" alt="facebook-sesión"
+            /></a>
+            <a href="#"
+              ><img src="/images/twitter-logo.webp" alt="twitter-sesión"
+            /></a>
+          </div>
+        </div>
+      </dialog>
+</body>
+<script src="/indexJS.js"></script>
+</html>
