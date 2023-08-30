@@ -26,7 +26,6 @@ window.addEventListener('resize', function() {
 });
 
 
-
 /*----------------------------------MODAL-------------------------------------------*/
 
   const modal = document.querySelector("#modal")
@@ -48,16 +47,41 @@ window.addEventListener('resize', function() {
   
 /*-------------------------------ul--------------------------------------------------*/
 
-const openList = document.querySelector(".header__nav--recursos")
-const list = document.querySelector (".subMenu")
+const Li = document.querySelector(".header__nav--recursos");
+const submenu = document.querySelector(".subMenu");
 
-openList.addEventListener("click", () =>{
-  
-  if(list.style.display === "none"){
-    list.style.display = "block"
-  }
-  else{
-    list.style.display = "none";
-  }
-});
+function showSubmenu() {
+    submenu.style.display = "block";
+}
 
+function hideSubmenu() {
+  submenu.style.display = "none";
+}
+
+function toggleLi() {
+    if (submenu.style.display === "none") {
+        submenu.style.display = "block";
+    } else {
+        submenu.style.display = "none";
+    }
+}
+
+
+if(window.innerWidth >= 950){
+  Li.addEventListener("mouseover", showSubmenu)
+    Li.addEventListener("mouseout", hideSubmenu)
+}
+
+window.addEventListener("resize", () =>{
+  if (window.innerWidth >= 950) {
+    Li.removeEventListener("click", toggleLi)
+    Li.addEventListener("mouseover", showSubmenu)
+    Li.addEventListener("mouseout", hideSubmenu)
+    
+  }else{ 
+    Li.removeEventListener("mouseover", showSubmenu)
+    Li.removeEventListener("mouseout", hideSubmenu)
+    Li.addEventListener("click", toggleLi)
+
+  }
+})
